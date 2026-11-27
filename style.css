@@ -1,0 +1,220 @@
+
+/* General styles */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding-top: 75px;
+    background-color: #FAF6EE;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #0B1F4B;
+}
+
+h1, h2, h3 {
+    font-family: Georgia, serif;
+}
+
+/* Header */
+
+header {
+    background-color: #0B1F4B;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5%;
+}
+
+.logo {
+    color: white;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    display: inline-block;
+}
+
+.nav-links a:link {
+    color: white;
+}
+
+.nav-links a:visited {
+    color: white;
+}
+
+.nav-links a:hover {
+    background-color: #E0A526;
+    color: #0B1F4B;
+}
+
+.nav-links a:active {
+    color: white;
+}
+
+.nav-links .active {
+    border-bottom: 3px solid #E0A526;
+}
+
+/* Hero */
+
+.hero {
+    background: linear-gradient(135deg, #0B1F4B, #263F70);
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #E0A526;
+    color: #0B1F4B;
+    text-decoration: none;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.btn:hover {
+    background-color: #c89216;
+}
+
+.btn:active {
+    transform: scale(0.95);
+}
+
+/* Tour cards */
+
+.tours {
+    padding: 40px 5%;
+    text-align: center;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 25px;
+}
+
+.card {
+    position: relative;
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 0 3px 10px #00000020;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-8px);
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #E0A526;
+    color: #0B1F4B;
+    padding: 6px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.tour-image {
+    font-size: 55px;
+    margin-top: 25px;
+}
+
+.price {
+    font-weight: bold;
+    color: #C0392B;
+}
+
+/* Booking form */
+
+.booking-section {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 25px;
+}
+
+#bookingForm {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 6px;
+}
+
+label[for="name"]::after,
+label[for="email"]::after,
+label[for="date"]::after {
+    content: " *";
+    color: #C0392B;
+}
+
+input, select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input:focus, select:focus {
+    outline: 2px solid #E0A526;
+    border-color: #0B1F4B;
+}
+
+#totalPrice {
+    background-color: #FAF6EE;
+    padding: 15px;
+    margin: 20px 0;
+    font-weight: bold;
+}
+
+#message {
+    font-weight: bold;
+}
+
+/* Footer */
+
+footer {
+    background-color: #0B1F4B;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* Tablet */
+
+@media (min-width: 768px) {
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Desktop */
+
+@media (min-width: 1200px) {
+    .card-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
