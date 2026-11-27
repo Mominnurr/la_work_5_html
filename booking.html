@@ -1,0 +1,61 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registan Travel - Booking</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+        <h2 class="logo">Registan Travel</h2>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="booking.html" class="active">Booking</a>
+        </div>
+    </nav>
+</header>
+
+<main class="booking-section">
+    <h1>Book Your Tour</h1>
+
+    <form id="bookingForm">
+
+        <label for="name">Full Name</label>
+        <input type="text" id="name" required>
+
+        <label for="email">Email Address</label>
+        <input type="text" id="email" required>
+
+        <label for="tour">Choose Tour</label>
+        <select id="tour">
+            <option value="35">Old Tashkent Walk - 35 USD</option>
+            <option value="120">Registan & Gur-e-Amir - 120 USD</option>
+            <option value="210">Khiva Itchan Kala - 210 USD</option>
+        </select>
+
+        <label for="travellers">Number of Travellers</label>
+        <input type="number" id="travellers" min="1" max="12" value="1">
+
+        <label for="date">Travel Date</label>
+        <input type="date" id="date" required>
+
+        <div id="totalPrice">Total: 1 × 35 USD = 35 USD</div>
+
+        <button type="submit" class="btn">Submit Booking</button>
+
+        <p id="message"></p>
+
+    </form>
+</main>
+
+<footer>
+    <p>© 2026 Registan Travel</p>
+</footer>
+
+</body>
+</html>
